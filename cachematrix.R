@@ -1,5 +1,5 @@
-## The below functions compute and/or cache the inverse of a squared matrix
-## makeCacheMatrix is a function that take a matrix object and can cache its inverse
+## The below functions compute and/or cache the inverse of a square matrix
+## makeCacheMatrix is a function that takes a matrix object and can cache its inverse
 ## cacheSolve computes or caches the inverse of the matrix returned by MakeCacheMatrix
 
 ## Function creates a "special" matrix object that can cache its inverse
@@ -12,7 +12,7 @@ makeCacheMatrix <- function(x = matrix()) {
         }
         get <- function() x # Returns the original matrix
         setinverse <- function(solve) ma <<- solve 
-        getinverse <- function () ma # Return the matrix inverse
+        getinverse <- function () ma # Return the inverse matrix
         list (set = set, get = get, 
               setinverse = setinverse,
               getinverse = getinverse)
